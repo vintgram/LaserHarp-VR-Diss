@@ -17,11 +17,11 @@ public class HandControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*float fistValue = ActionFist.action.ReadValue<float>();
+        float fistValue = ActionFist.action.ReadValue<float>();
         float pinchValue = ActionPinch.action.ReadValue<float>();
 
         handAnimator.SetFloat("Grip", fistValue);
-        handAnimator.SetFloat("Trigger", pinchValue);*/
+        handAnimator.SetFloat("Trigger", pinchValue);
 
     }
 }

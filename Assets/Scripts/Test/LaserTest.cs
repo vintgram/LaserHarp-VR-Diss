@@ -13,11 +13,15 @@ public class LaserTest : MonoBehaviour
 
     private GameObject ColisionLight;
     private Vector3 lightPos;
-    
+
+    private AudioSource _audioSource;
 
 
     void Start()
     {
+
+        _audioSource = GetComponent<AudioSource>();
+
         //End Point Colission
         ColisionLight = new GameObject();
         ColisionLight.AddComponent<Light>();
@@ -47,12 +51,27 @@ public class LaserTest : MonoBehaviour
             GetComponent<LineRenderer>().SetPosition(0, transform.position);
             GetComponent<LineRenderer>().SetPosition(1, hit.point);
             ColisionLight.transform.position = (hit.point - lightPos);
+
+
+
+
+            if (_audioSource.isPlaying) return;
+            gameObject.GetComponent<Synth>().gain = gameObject.GetComponent<Synth>().volume;
+            gameObject.GetComponent<Synth>().frequency = gameObject.GetComponent<Synth>().frequencies[gameObject.GetComponent<Synth>().thisFreq];
+            gameObject.GetComponent<Synth>().thisFreq += 1;
+            gameObject.GetComponent<Synth>().thisFreq = gameObject.GetComponent<Synth>().thisFreq % gameObject.GetComponent<Synth>().frequencies.Length;
+            _audioSource.Play();
         }
         else
         {
             GetComponent<LineRenderer>().SetPosition(0, transform.position);
             GetComponent<LineRenderer>().SetPosition(1, LaserEnd);
             ColisionLight.transform.position = LaserEnd;
+            _audioSource.Stop();
         }
+
+
+
+ 
     }
 }

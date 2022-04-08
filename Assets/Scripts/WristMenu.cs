@@ -17,16 +17,9 @@ public class WristMenu : MonoBehaviour
         DisplayWristUI();
     }
 
-    public void ExitGame()
-    {
-        Application.Quit();
-        
-    }
-
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(0);
-
     }
 
     public void SpawnPreFab()
