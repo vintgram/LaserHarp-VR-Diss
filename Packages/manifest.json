@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.normalvr.normcore": "2.1.11",
+    "com.normalvr.normcore": "2.2.3",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.collab-proxy": "1.15.15",
     "com.unity.ide.rider": "3.0.13",
