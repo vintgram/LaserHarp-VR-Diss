@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class WristMenu : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject projector;
+
     public GameObject wristUI;
     public bool activeWristUI = true;
 
@@ -14,6 +17,7 @@ public class WristMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         DisplayWristUI();
     }
 
@@ -34,6 +38,8 @@ public class WristMenu : MonoBehaviour
             DisplayWristUI();
     }
 
+  
+
 
     // Update is called once per frame
 
@@ -50,4 +56,6 @@ public class WristMenu : MonoBehaviour
             activeWristUI = true;
         }
     }
+
+
 }
