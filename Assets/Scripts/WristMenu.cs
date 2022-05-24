@@ -6,28 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class WristMenu : MonoBehaviour
 {
+    //Define the variables for the wrist menu
     public GameObject wristUI;
     public bool activeWristUI = true;
 
+    //The projector
     public GameObject myPrefab;
 
     // Start is called before the first frame update
     void Start()
-    {
+    {      
         DisplayWristUI();
     }
 
+    //Function to take the user back to the main menu
     public void ReturnToMenu()
     {
         SceneManager.LoadScene(0);
     }
 
+    //Function to spawn the projector into the scene
     public void SpawnPreFab()
     {
+
         Instantiate(myPrefab);
-
     }
-
+    //Checks if the button has been pressed to open or close the menu
     public void MenuPressed(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -35,8 +39,8 @@ public class WristMenu : MonoBehaviour
     }
 
 
-    // Update is called once per frame
 
+    //Function to open or close the menu
     public void DisplayWristUI()
     {
         if(activeWristUI)
