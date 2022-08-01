@@ -1,3 +1,4 @@
+<img src="./Assets/Images/LaserHarp_Logo.png"/>
 <h1> Here are the unity files for LaserHarp VR </h>
 
 <h2>Here is the build of the game  </h2>
